@@ -1,0 +1,185 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: rubikmaps;
+  src: url(fonts/Rubik_Maps/RubikMaps-Regular.ttf);
+}
+@font-face {
+  font-family: mooli;
+  src: url(fonts/Mooli/Mooli-Regular.ttf);
+}
+@font-face {
+  font-family: Caprasimo;
+  src: url(fonts/Caprasimo/Caprasimo-Regular.ttf);
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+html {
+  overflow: hidden;
+}
+
+.left-side-container {
+  width: 40vw;
+  height: 100vh;
+  position: relative;
+}
+.left-side-container #background-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.left-side-container #caption {
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  text-align: center;
+  color: #2029BC;
+  font-size: clamp(16px, 2.7vw, 30px);
+  font-style: oblique;
+  font-family: Caprasimo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.right-side-container {
+  background-color: #252A2A;
+  width: 60vw;
+  color: white;
+  padding: 2.4% 3%;
+}
+.right-side-container #form {
+  width: 100%;
+  height: 100%;
+  background-color: #030A24;
+  border: 6px double #13181A;
+  border-radius: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-side-container #form #title {
+  font-size: clamp(16px, 3.2vw, 40px);
+  text-transform: capitalize;
+  font-family: rubikmaps, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #2029BC;
+}
+.right-side-container #form #text {
+  font-size: clamp(10px, 1.5vw, 28px);
+  opacity: 0.8;
+  margin: 10px 20px;
+  font-family: mooli, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.right-side-container #form #sub-title {
+  font-size: clamp(14px, 1.9vw, 32px);
+  text-transform: capitalize;
+  align-self: flex-start;
+  margin: 0 20px;
+  font-family: Caprasimo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #24030A;
+}
+.right-side-container #form .fieldset {
+  align-self: flex-start;
+  margin: 0 20px;
+  font-size: clamp(8px, 1.3vw, 26px);
+  opacity: 0.8;
+  margin: 10px 20px;
+  font-family: mooli, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 5vh;
+  padding: 5vh 0;
+}
+.right-side-container #form .fieldset .input-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.right-side-container #form .fieldset .input-container .input {
+  width: 66%;
+  height: clamp(20px, 5vh, 40px);
+  padding: 0 10px;
+  border: none;
+  background-color: #030A24;
+  border-bottom: 5px solid #24030A;
+  font-size: clamp(14px, 1.3vw, 28px);
+  font-family: mooli, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  outline: 4px solid transparent;
+  transition: transform 0.3s ease, outline 0.5s ease-in-out;
+}
+.right-side-container #form .fieldset .input-container .input:focus {
+  outline: 4px solid #252A2A;
+}
+.right-side-container #form .fieldset .submit-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.right-side-container #form .fieldset .submit-container #submit-btn {
+  width: clamp(100px, 33%, 500px);
+  height: 48px;
+  font-family: Caprasimo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: clamp(16px, 1.5vw, 40px);
+  background-color: #252A2A;
+  color: white;
+  border: none;
+  border-radius: 15px;
+}
+.right-side-container #form .fieldset .submit-container #submit-btn:hover {
+  box-shadow: 0px 0px 30px 5px #24030A;
+  color: #24030A;
+}/*# sourceMappingURL=main.css.map */

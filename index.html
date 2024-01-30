@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-side-container">
+            <img src="assets/images/blue-rose.jpg" alt="blue rose image" id="background-image">
+            <div id="caption">Silence. Subservience. Observance.</div>
+        </div>
+        <div class="right-side-container">
+            <form action="https://github.com/hamdi-trikii" method="" id="form" onsubmit="return check(this)">
+                <div id="title">The Hermetic Order of the Blue Rose</div>
+                <div id="text">In order to become a member of the Hermetic Order,
+                    neophytes must endure rigorous testing to ensure they are the correct fit for the Order. If a neophyte fails at any point, 
+                    their memory is erased using Pulveris memoria.
+                </div>
+                <div id="sub-title">You Belive that you are special? </div>
+                <fieldset class="fieldset">
+                    <legend>Apply to take the challanges</legend>
+                    <div class="input-container">
+                        <label for="f-name" class="label"></label>
+                        <input type="text" name="f-name" class="input" placeholder="First Name" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="l-name" class="label"></label>
+                        <input type="text" name="l-name" class="input" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="phone" class="label"></label>
+                        <input type="number" name="phone" class="input" placeholder="PHONE" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="email" class="label"></label>
+                        <input type="email" name="email" class="input" placeholder="E-MAIL" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="password" class="label"></label>
+                        <input type="password" name="password" class="input" placeholder="PASSWORD" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="c-password" class="label"></label>
+                        <input type="password" name="c-password" id="c-password" class="input" placeholder="CONFIRM PASSWORD" required>
+                    </div>
+
+                    <div class="submit-container">
+                        <input type="submit" id="submit-btn" value="Apply!">
+                    </div>
+                </fieldset>
+
+            </form>
+            
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
